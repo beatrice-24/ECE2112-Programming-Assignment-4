@@ -13,7 +13,7 @@ This repository contains my Jupyter Notebook submission for **ECE 2112: Advanced
 .
 ├─ 2ECEB_LUCAS_PA4.ipynb   # Jupyter notebook with solutions
 ├─ README.md               # You're here
-└─ board2.csv              # dataset containing student information (Track, Gender, Hometown, Average, etc.)   
+└─ board2.csv              # dataset used for analysis (student grades and attributes)   
 ```
 
 ---
@@ -141,12 +141,12 @@ We import the `matplotlib.pyplot` module as `plt` to generate plots and graphs.
 import matplotlib.pyplot as plt                
 ```
 
-### 2. Average Grade by College Track
+### 2. College Track vs Average Score
 We group students by `Track`, calculate their mean `Average` grades, and plot the result as a bar chart in maroon.
 
 - **X-axis (College Track):** Different academic tracks chosen by students.
-- **Y-axis (Average Grade:** Mean grade of students within each track.
-- **Title:** Clearly indicates we are comparing the college track against the average score.
+- **Y-axis (Average Grade):** Mean grade of students within each track.
+- **Title:** *College Track vs Average Score*
 
 ```
 track_avg = board2.groupby('Track')['Average'].mean()                          
@@ -157,12 +157,12 @@ plt.ylabel('Average Grade')
 plt.title('College Track vs Average Score')              
 ```
 
-### 3. Average Grade by Gender
+### 3. Gender vs Average Score
 We group students by `Gender`, compute their mean 'Average' grades, and plot the result as a green bar chart. 
 
 - **X-axis (Gender):** Male and female categories.
-- **Y-axis (Average Grade:** Mean grade of students for each gender.
-- **Title:** Highlights the comparison of gender with respect to the average score.
+- **Y-axis (Average Grade):** Mean grade of students for each gender.
+- **Title:** *Gender vs Average Score*
 
 ```
 gender_avg = board2.groupby('Gender')['Average'].mean()                       
@@ -173,12 +173,12 @@ plt.ylabel('Average Grade')
 plt.title('Gender vs Average Score')                       
 ```
 
-### 4. Average Grade by Hometown
+### 4. Hometown vs Average Score
 We group students by `Hometown`, calculate the mean of their `Average` grade, and plot the result as a navy-colored bar chart.
 
 - **X-axis (Hometown):** Regional categories (Luzon, Visayas, Mindanao)
-- **Y-axis (Average Grade:** Mean grade of students from each region.
-- **Title:** Shows the relationship between a student's hometown and their average score.
+- **Y-axis (Average Grade):** Mean grade of students from each region.
+- **Title:** *Hometown vs Average Score*
   
 ```
 hometown_avg = board2.groupby('Hometown')['Average'].mean()                   
