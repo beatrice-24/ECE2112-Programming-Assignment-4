@@ -11,9 +11,9 @@ This repository contains my Jupyter Notebook submission for **ECE 2112: Advanced
 
 ```
 .
-├─ board2.csv              # dataset containing student information (Track, Gender, Hometown, Average, etc.)
 ├─ 2ECEB_LUCAS_PA4.ipynb   # Jupyter notebook with solutions
-└─ README.md     
+├─ README.md               # You're here
+└─ board2.csv              # dataset containing student information (Track, Gender, Hometown, Average, etc.)   
 ```
 
 ---
